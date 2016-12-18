@@ -34,3 +34,4 @@ exclude:
   - Gemfile.lock
 include:
   - .well-known
+exclude: [vendor]
