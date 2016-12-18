@@ -1,23 +1,22 @@
 language: ruby
-
 cache: bundler
-
 rvm:
 - 2.2.2
-
 branches:
   only:
-    - master
-
-    script:
-    - bundle exec jekyll build
-
-    deploy:
-      provider: s3
-        bucket: your-bucket-name  # Update this
-          skip_cleanup: true
-            region: eu-west-1         # Or whatever region you use
-              local_dir: _site
-                on:
-                    branch: master          # You can use another branch if you want
-                      dot_match: true
+  - master
+script:
+- bundle exec jekyll build
+deploy:
+  provider: s3
+  bucket: khadilkar.net
+  skip_cleanup: true
+  region: us-east-1
+  local_dir: _site
+  on:
+    branch: master
+  dot_match: true
+  access_key_id:
+    secure: Y2A04ld1Ec0NldBvC3BwZauxFxQHUW8D40Qqrq+82ULYLppHHKZ54bgPcQay9jCboZ1PMmUmAHJZ18LC4J75oOpM7bw9vXvTFw14WBOU2IYBlCG5+gmHfZTvts6LOPxqxl7ElM40oxNVwS7XKfWBFrZHj9KywC7+jLSHHgYpVOS8cIO2qpfADnehc/UAbkvbO0bL78e8KEJnZWcwR3xYltJkxrzRK1VVk1vAg8DwODTp9vEA00DrEk28vMmGDkPJ1x1UaEbd+dEU/UHzIKxT46m+iZ5vR1CTYMpS3mQCoYOJoteH3C2B6rs6SN6fsFlo8yqed7Dlihom8oGz4RoLceQciyyoHZnJJFwFWpfawGL/Z6xGyO5vyY/OECnFgDwQrbMvRasq1kQ4KU7N6gVe3PlVClnWm2dWhyyp/oyLJNJD5DIB0tvbQAZe4zPYiveRII5uxT6WxXjUrI1qM7R38W4JOsaIcb8D+KCzwPv9U+IHsmyV6HbV3kRKxEgmCTro726upRLpQnTWdLTbWU4gbg+8WIaVwrPEMZRBRlNvaah8t04e2R+OqJ86qOuHyFj+8N+yZyfYIKmGB/2/wxT4tK+DBLViCNqzL0YM3VMsmGZdgsTRFmw+mwLKn95CQPvz2pIN3qPbO/pv2nN6Ry3Ul6w+zzttJr/RPFTkim+3q9Y=
+  secret_access_key:
+    secure: QKs6Ce3nMWE837jPJslIH1UmbQdBD1Sjt6/IkJc68tvpVE8S6tkkyeyrW88Pqty8XskDDB4a4IZCxDOdST1LuHXSXW4zzsKZeKD3qiai98B6V1Npq1tWA+mezWW/paUaAzgmMtbYklh7uFsc858UOiQmn0z+KOXIgPHIX0RsHXjGNKB2NaCTuzJB8FNsDdbnlXyohC1oXs8z6n2PHgbDFRTheHN++GREn2OCZ2ZIEHdwyKFkDsIKKlrIV9b55J6d846Y6Y6bvWbldTMGldjVjbq0R0Atbpd5DEsRtD/nzdKNpL1uV9qeVpr1iG3x1NPyT2/7nHg+PhA0yR/G1nsSKjgin6IxhDDCrIdvG2CndYVxlnu+fjOEoTPGDcYwkMHsQB3j45deXXHN2sukTLrWcPw49lof8btNrrvRvuprNhruChJhDImtyA5hipTe38umnoXQO70Su2Cf3a88Hp4xZknNv10TTeTKFiNAb1CLuXPE2+iT4HdxHgP2mSvL8Lu9BBjNlNdqmYdpVdjOa7QnFnNn843XXGaKdHQQiioFu1o7ucF2B18kfqmYPuWOy3LRmTMGPh3gpoPMwjAW8piGc8278eVOir+5i76NzbLHrUAW7YP+uMoKBXCzWuizexu627P7kj0L4HxIuqen3jM+Is++OLPFCS87XaLulN9LyV8=
