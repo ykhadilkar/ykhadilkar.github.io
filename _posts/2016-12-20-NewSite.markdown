@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Welcome to Khadilkar.net!"
+date:   2016-12-20 15:42:00 -0500
+categories: khadilkar.net update
+---
+How is this site is build ...
+* This is static website generated using [Jekyll](https://jekyllrb.com/). 
+* Code for this site is hosted on [github.com](https://github.com/kyatin1/khadilkar.net)
+* I use [Travis CI](https://travis-ci.org/) to build the code and deploy generated files to AWS S3 bucket.
+* I am using AWS Cloud Front to distribute the website. Main reason, to use cloud front, is I wanted to serve website over SSL. So far I have not figured out way to serve static site directly from S3 bucker over HTTPS. 
+* I am using https://letsencrypt.org/ for SSL cert. It's free...
