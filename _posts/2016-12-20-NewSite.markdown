@@ -4,7 +4,7 @@ title:  "Welcome to Khadilkar.net!"
 date:   2016-12-20 15:42:00 -0500
 categories: khadilkar.net update
 ---
-# How is this site is build ...
+# How is this site built ...
 * This is static website generated using [Jekyll](https://jekyllrb.com/). 
 * Code for this site is hosted on [github.com](https://github.com/kyatin1/khadilkar.net)
 * I use [Travis CI](https://travis-ci.org/) to build the code and deploy generated files to AWS S3 bucket.
